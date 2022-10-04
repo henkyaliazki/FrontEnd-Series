@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,700&family=Montserrat:wght@500&display=swap");
+
+:root {
+  --bg-color-primary: hsl(30, 38%, 92%);
+  --btn-color-primary: hsl(158, 36%, 37%);
+  --text-color-primary: hsl(228, 12%, 48%);
+  --title-color-primary: hsl(212, 21%, 14%);
+  --card-color-body: hsl(0, 0%, 100%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bg-color-primary);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 0 30px;
+  margin: 30px auto;
+}
+.card {
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--card-color-body);
+  border-radius: 15px;
+  overflow: hidden;
+}
+img {
+  max-width: 100%;
+  height: 100%;
+  display: inherit;
+}
+.card-body {
+  padding: 2em 3em;
+  width: 100%;
+}
+.lead {
+  font-size: 25px;
+  padding-bottom: 10px;
+  color: var(--text-color-primary);
+}
+.title {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 30px;
+}
+.description {
+  padding: 1em 0;
+  letter-spacing: 1px;
+  color: var(--text-color-primary);
+}
+.price {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.price-update {
+  font-family: "Fraunces", serif;
+  color: var(--btn-color-primary);
+  font-size: 30px;
+  padding: 1em 0;
+}
+.price-before {
+  color: var(--text-color-primary);
+  text-decoration: line-through;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--btn-color-primary);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5 ease;
+}
+button > img {
+  padding-right: 10px;
+}
+button:hover {
+  background-color: hsl(158, 36%, 23%);
+}
+@media only screen and (max-width: 620px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .card > img {
+    max-height: 420px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .container {
+    margin: 15px 0;
+  }
+}
